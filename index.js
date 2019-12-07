@@ -136,7 +136,7 @@ var torrentStream = function (link, opts, cb) {
           offset: file.offset
         }
       })
-    }))
+    }, torrent.infoHash))
     engine.torrent = torrent
     engine.bitfield = bitfield(torrent.pieces.length)
 
